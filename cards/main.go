@@ -1,5 +1,11 @@
 package main
 
-func main() {
+import "fmt"
 
+func main() {
+	// var card string = "Hello there"
+	card := "Hello There"
+	card = "Hello Sam"
+
+	fmt.Println(card)
 }
