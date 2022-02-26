@@ -2,12 +2,17 @@ package main
 
 import "fmt"
 
-var card string
+// var card string
 
 func main() {
-	// var card string = "Hello there"
-	// card := "Hello There"
-	card = "Hello Sam"
+	// var card string = "Queens Heart"
+	// card = "King Heart"
+
+	card := newCard()
 
 	fmt.Println(card)
+}
+
+func newCard() string {
+	return "Five of Diamonds"
 }
