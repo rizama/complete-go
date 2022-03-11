@@ -9,5 +9,5 @@ func main() {
 }
 
 func newCard() string {
-	return "Nine of Diamonds"
+	return "Nine of Heart"
 }
