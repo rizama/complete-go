@@ -6,7 +6,7 @@ import "fmt"
 // which is a slice of strings
 type deck []string
 
-// Create and return a list of playing cards. Essesntially an array of string
+// Create and return a list of playing cards. Essentially an array of string
 func newDeck() deck {
 	// empty slice of deck
 	cards := deck{}
@@ -26,7 +26,12 @@ func newDeck() deck {
 
 // receiver (d deck)
 func (d deck) myPrint() {
-	for i, card := range d {
-		fmt.Println(card, i)
+	for _, card := range d {
+		fmt.Println(card)
 	}
+}
+
+// Slice Range and Multiple Return
+func deal(d deck, handSize int) (deck, deck) {
+	return d[:handSize], d[handSize:]
 }
