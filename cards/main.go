@@ -1,8 +1,10 @@
 package main
 
 func main() {
-
 	cards := newDeck()
 
-	cards.myPrint()
+	hand, remainingCards := deal(cards, 6)
+
+	hand.myPrint()
+	remainingCards.myPrint()
 }
