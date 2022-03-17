@@ -25,7 +25,7 @@ func newDeck() deck {
 }
 
 // receiver (d deck)
-func (d deck) myPrint() {
+func (d deck) print() {
 	for _, card := range d {
 		fmt.Println(card)
 	}
