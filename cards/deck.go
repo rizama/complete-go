@@ -30,8 +30,12 @@ func newDeck() deck {
 
 // function with receiver (d deck)
 func (d deck) myPrint() {
-	for _, card := range d {
-		fmt.Println(card)
+	if len(d) <= 0 {
+		fmt.Println("No Deck to Print Out")
+	} else {
+		for _, card := range d {
+			fmt.Println(card)
+		}
 	}
 }
 
@@ -50,4 +54,20 @@ func (d deck) toString() string {
 func (d deck) saveToFile(filename string) error {
 	// filename, slice of bytes string, permission to create file
 	return ioutil.WriteFile(filename, []byte(d.toString()), 0666)
+}
+
+// Function new DeckFromFile
+func newDeckFromFile(filename string) deck {
+	bs, err := ioutil.ReadFile(filename)
+	if err != nil {
+		//	Option #1 -> Log the error and return an empty Deck
+		fmt.Println("Error: ", err)
+		return deck{}
+
+		//	Option #2 -> Log the error and entirely quit the program
+		//fmt.Println("Error: ", err)
+		//os.Exit(1)
+	}
+	sliceOfString := strings.Split(string(bs), ",")
+	return deck(sliceOfString)
 }
