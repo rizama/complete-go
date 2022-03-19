@@ -9,6 +9,10 @@ func main() {
 
 	hand.myPrint()
 	remainingCards.myPrint()
-	fmt.Println("==================================")
-	fmt.Println(hand.toString())
+
+	err := cards.saveToFile("my_cardas.txt")
+	fmt.Println(err)
+	if err != nil {
+		return
+	}
 }
