@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 // Create new Type of 'deck'
 // which is a slice of strings
@@ -24,14 +27,20 @@ func newDeck() deck {
 
 }
 
-// receiver (d deck)
+// function with receiver (d deck)
 func (d deck) myPrint() {
 	for _, card := range d {
 		fmt.Println(card)
 	}
 }
 
-// Slice Range and Multiple Return
+// Slice Range and Multiple Return (function with arguments)
 func deal(d deck, handSize int) (deck, deck) {
 	return d[:handSize], d[handSize:]
+}
+
+// Deck to String (function with receiver)
+func (d deck) toString() string {
+	// Joining a slice to string
+	return strings.Join(d, ",")
 }
