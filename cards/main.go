@@ -10,9 +10,14 @@ func main() {
 	hand.myPrint()
 	remainingCards.myPrint()
 
-	err := cards.saveToFile("my_cardas.txt")
-	fmt.Println(err)
-	if err != nil {
+	//Save to file
+	errSaveFile := cards.saveToFile("my_cardas.txt")
+	if errSaveFile != nil {
 		return
 	}
+
+	//Read from file
+	fmt.Println("===============")
+	newCards := newDeckFromFile("my_carsdas.txt")
+	newCards.myPrint()
 }
