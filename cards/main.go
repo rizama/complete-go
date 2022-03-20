@@ -11,13 +11,13 @@ func main() {
 	//remainingCards.myPrint()
 
 	//Save to file
-	//errSaveFile := cards.saveToFile("my_cardas.txt")
+	//errSaveFile := cards.saveToFile("cards.txt")
 	//if errSaveFile != nil {
 	//	return
 	//}
 
 	//Read from file
-	//newCards := newDeckFromFile("my_carsdas.txt")
+	//newCards := newDeckFromFile("cards.txt")
 	//newCards.myPrint()
 
 	//Shuffle
