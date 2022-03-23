@@ -4,7 +4,7 @@ import "testing"
 
 func TestNewDeck(t *testing.T) {
 	d := newDeck()
-	expectedLength := 20
+	expectedLength := 16
 	expectedFirstCard := "Ace of Spades"
 	expectedLastCard := "Four of Clubs"
 
