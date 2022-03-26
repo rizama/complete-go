@@ -4,12 +4,9 @@ import "fmt"
 
 type numbersInt = []int
 
-func main() {
-	//	Create Slice 0-10
-	numbers := newNumbers(10)
-
+func myPrint(n numbersInt) {
 	// Looping for Check the number is even or odd
-	for _, number := range numbers {
+	for _, number := range n {
 		// Check the number
 		if number%2 == 0 {
 			//	Print the result
@@ -29,4 +26,12 @@ func newNumbers(max int) numbersInt {
 	}
 
 	return numbers
+}
+
+func main() {
+	//	Create Slice
+	numbers := newNumbers(10)
+
+	//	Print even and odd
+	myPrint(numbers)
 }
