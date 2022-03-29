@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-type numbersInt = []int
+type numbersInt []int
 
 func myPrint(n numbersInt) {
 	// Looping for Check the number is even or odd
@@ -33,5 +33,18 @@ func main() {
 	numbers := newNumbers(10)
 
 	//	Print even and odd
-	myPrint(numbers)
+	numbers.myPrint2()
+}
+
+func (n numbersInt) myPrint2() {
+	// Looping for Check the number is even or odd
+	for _, number := range n {
+		// Check the number
+		if number%2 == 0 {
+			//	Print the result
+			fmt.Println(number, "is even")
+		} else {
+			fmt.Println(number, "is odd")
+		}
+	}
 }
