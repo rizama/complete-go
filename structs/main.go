@@ -5,7 +5,7 @@ import "fmt"
 type person struct {
 	firstName string
 	lastName  string
-	contact   contactInfo
+	contactInfo
 }
 
 type contactInfo struct {
@@ -33,13 +33,20 @@ func main() {
 	sampratama := person{
 		firstName: "SAM",
 		lastName:  "PRATAMA",
-		contact: contactInfo{
+		contactInfo: contactInfo{
 			email:   "sam@gmail.com",
 			zipCode: 12345,
 		},
 	}
 
-	fmt.Printf("%+v", sampratama)
-	println("")
-	fmt.Printf("%v", sampratama.contact.email)
+	sampratama.myPrint()
+	sampratama.updateName("Rizama")
+}
+
+func (p person) updateName(newFirstname string) {
+	p.firstName = newFirstname
+}
+
+func (p person) myPrint() {
+	fmt.Printf("%+v", p)
 }
