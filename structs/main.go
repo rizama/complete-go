@@ -40,11 +40,13 @@ func main() {
 	}
 
 	sampratama.myPrint()
-	sampratama.updateName("Rizama")
+	samPointer := &sampratama
+	samPointer.updateName("Rizama")
+	sampratama.myPrint()
 }
 
-func (p person) updateName(newFirstname string) {
-	p.firstName = newFirstname
+func (p *person) updateName(newFirstname string) {
+	(*p).firstName = newFirstname
 }
 
 func (p person) myPrint() {
