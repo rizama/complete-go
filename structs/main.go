@@ -40,15 +40,18 @@ func main() {
 	}
 
 	sampratama.myPrint()
-	samPointer := &sampratama
+	samPointer := &sampratama // Give me the memory address of the values this variable is pointing at
 	samPointer.updateName("Rizama")
 	sampratama.myPrint()
 }
 
+//*person :this is a description type - it means we're working with a pointer to a person
+//*p :this is a operator - it means we want to manipulate the values pointer is referencing
 func (p *person) updateName(newFirstname string) {
-	(*p).firstName = newFirstname
+	(*p).firstName = newFirstname //Give me the value this memory address is pointing at
 }
 
 func (p person) myPrint() {
 	fmt.Printf("%+v", p)
+	fmt.Println()
 }
