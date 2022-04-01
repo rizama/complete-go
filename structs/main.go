@@ -53,5 +53,4 @@ func (p *person) updateName(newFirstname string) {
 
 func (p person) myPrint() {
 	fmt.Printf("%+v", p)
-	fmt.Println()
 }
