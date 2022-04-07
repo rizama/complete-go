@@ -52,6 +52,6 @@ func main() {
 
 	sampratama.myPrint()
 	// samPointer := &sampratama // Give me the memory address of the values this variable is pointing at
-	sampratama.updateName("Rizama")
+	sampratama.updateName("Rizama") // Shotcut pointer, Golang will automatically detect struct pointer
 	sampratama.myPrint()
 }
