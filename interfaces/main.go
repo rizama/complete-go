@@ -21,7 +21,7 @@ func printGreeting(b bot) {
 }
 
 func (englishBot) getGreeting() string {
-	return "Hello!!!"
+	return "Hello there!!!"
 }
 
 func (spanishBot) getGreeting() string {
