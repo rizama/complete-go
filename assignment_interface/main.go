@@ -19,7 +19,7 @@ func main() {
 	dataTriangle := triangle{base: 3, height: 4}
 	dataSquare := square{sideLength: 5}
 
-	printArea((dataTriangle))
+	printArea(dataTriangle)
 	printArea(dataSquare)
 }
 
