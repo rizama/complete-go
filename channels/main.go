@@ -21,6 +21,11 @@ func main() {
 	}
 
 	fmt.Println(<-c)
+	fmt.Println(<-c)
+	fmt.Println(<-c)
+	fmt.Println(<-c)
+	fmt.Println(<-c)
+
 }
 
 func checkLink(link string, c chan string) {
@@ -33,5 +38,5 @@ func checkLink(link string, c chan string) {
 	}
 
 	fmt.Println(link + " is Up!")
-	c <- "Yep is up"
+	c <- link + ": Yep is up"
 }
